@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/imgs/logo.png"
+      type="image/x-icon"
+    />
+    <!-- ^ font awesome v6.0 -->
+    <link rel="stylesheet" href="./assets/css/all.min.css" />
+    <!-- ^ bootstrap v5.3 -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <!-- ^ our css file -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Yummy</title>
+  </head>
+  <body>
+    <div
+      id="loadingScreen"
+      class="loading-screen d-flex justify-content-center align-items-center position-fixed top-0 start-0 end-0 bottom-0 bg-black"
+    >
+      <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+
+    <div id="app" class="app d-flex">
+      <aside id="sidebar" class="d-flex">
+        <div
+          id="pages"
+          class="pages bg-black text-white p-4 d-flex flex-column justify-content-between"
+        >
+          <ul class="list-unstyled">
+            <li id="searchLink" class="mb-3 cursor-pointer">Search</li>
+            <li id="categoriesLink" class="mb-3 cursor-pointer">Categories</li>
+            <li id="areaLink" class="mb-3 cursor-pointer">Area</li>
+            <li id="ingredientsLink" class="mb-3 cursor-pointer">
+              Ingredients
+            </li>
+            <li id="contactUsLink" class="mb-3 cursor-pointer">Contact Us</li>
+          </ul>
+          <footer>
+            <div class="icons">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <div>Copyright Â© 2019 All Rights Reserved.</div>
+          </footer>
+        </div>
+
+        <div
+          id="bar"
+          class="bar bg-white p-4 d-flex flex-column justify-content-between align-items-center"
+        >
+          <img id="ourLogo" src="./assets/imgs/logo.png" alt="our logo" />
+          <div class="icon" id="toCloseAndOpen">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="icons">
+            <i class="fa-solid fa-globe"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+        </div>
+      </aside>
+
+      <main id="main" class="bg-black">
+        <div id="searchArea" class="search">
+          <div class="container-fluid">
+            <input
+              class="form-control mb-2"
+              type="text"
+              placeholder="Search By Name"
+            />
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Search By First Letter"
+            />
+          </div>
+        </div>
+
+        <div class="min-vh-100 position-relative">
+          <div
+            id="innerLoadingScreen"
+            class="position-absolute d-none top-0 start-0 end-0 bottom-0 justify-content-center align-items-start"
+          >
+            <i class="fa fa-spinner fa-spin fa-5x"></i>
+          </div>
+
+          <div class="container-fluid bg-black" id="mainContent"></div>
+        </div>
+      </main>
+    </div>
+
+    <!-- ^ font awesome v6.0 -->
+    <script src="./assets/js/all.min.js"></script>
+    <!-- ^ bootstrap v5.3 -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <!-- ^ jquery v3.7.0 -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <!-- ^ our js file -->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>

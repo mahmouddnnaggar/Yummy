@@ -1,0 +1,95 @@
+/* ^ global utilities */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #010101b0;
+}
+::-webkit-scrollbar-thumb {
+  background: #fbc911;
+  border-radius: 2px;
+}
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 330px;
+  min-height: 100vh;
+  transition: left 0.8s;
+  z-index: 999999;
+}
+#sidebar.active {
+  left: 0;
+}
+#sidebar #pages {
+  width: 260px;
+  min-height: inherit;
+}
+#sidebar #pages ul li {
+  opacity: 0;
+  transform: translateY(200px);
+  transition: transform 0.8s, opacity 0.8s;
+  transition-delay: 0.1s, 0.1s;
+}
+#sidebar #pages ul li.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+#sidebar #bar {
+  width: 70px;
+  min-height: inherit;
+}
+#main {
+  width: calc(100% - 70px);
+  margin-inline-start: auto;
+  min-height: 100vh;
+}
+#main .search {
+  display: none;
+  padding: 40px 80px 0;
+}
+#main .container-fluid#mainContent {
+  padding: 50px;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+#main .container-fluid.in-contact#mainContent {
+  display: block !important;
+}
+#main .container-fluid .meal .meal-layer {
+  background-color: rgba(0, 0, 0, 0.548);
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.8s;
+  color: #fff !important;
+}
+#main .container-fluid .meal:hover .meal-layer {
+  top: 0;
+}
+#sidebar img[alt="our logo"] {
+  width: 50px;
+  cursor: pointer;
+}
+#sidebar img[alt="our logo"] + .icon {
+  font-size: 40px;
+  cursor: pointer;
+}
+#loadingScreen {
+  z-index: 9999999999999;
+}
+#innerLoadingScreen {
+  z-index: 9999;
+  background-color: #000;
+  padding-top: 280px;
+}
+.contact-form {
+  margin-top: -100px;
+}
